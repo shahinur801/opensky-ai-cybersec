@@ -1,9 +1,8 @@
+Made by Shahinur Islam.
+
 # OpenSky AI Cybersecurity
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green.svg)](https://fastapi.tiangolo.com)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org) [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org) [![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green.svg)](https://fastapi.tiangolo.com)
 
 A real-time aircraft tracking and cybersecurity analysis system that leverages the OpenSky Network API to monitor aircraft movements and detect potential security threats using AI-powered analytics.
 
@@ -20,6 +19,7 @@ A real-time aircraft tracking and cybersecurity analysis system that leverages t
 ## 🏗️ Architecture
 
 ### Backend
+
 - **Framework**: FastAPI (Python) for high-performance async API
 - **Database**: Ready for PostgreSQL/MongoDB integration
 - **API Client**: OpenSky Network REST API integration
@@ -27,6 +27,7 @@ A real-time aircraft tracking and cybersecurity analysis system that leverages t
 - **Authentication**: JWT-based security system
 
 ### Frontend
+
 - **Framework**: React.js 18+ with modern hooks
 - **Styling**: Responsive CSS3 design
 - **State Management**: React Context API
@@ -39,20 +40,21 @@ A real-time aircraft tracking and cybersecurity analysis system that leverages t
 ### Prerequisites
 
 Ensure you have the following installed:
-- **Python 3.8+** (Python 3.9+ recommended)
-- **Node.js 16+** (Node.js 18+ recommended)
-- **npm** or **yarn** package manager
-- **Git** for version control
+
+- Python 3.8+ (Python 3.9+ recommended)
+- Node.js 16+ (Node.js 18+ recommended)
+- npm or yarn package manager
+- Git for version control
 
 ### Installation
 
-1. **Clone the repository**:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/shahinur801/opensky-ai-cybersec.git
    cd opensky-ai-cybersec
    ```
 
-2. **Backend Setup**:
+2. **Backend Setup:**
    ```bash
    cd backend
    
@@ -72,7 +74,7 @@ Ensure you have the following installed:
    uvicorn main:app --reload --host 0.0.0.0 --port 5000
    ```
 
-3. **Frontend Setup** (in a new terminal):
+3. **Frontend Setup (in a new terminal):**
    ```bash
    cd frontend
    
@@ -83,26 +85,29 @@ Ensure you have the following installed:
    npm start
    ```
 
-4. **Access the Application**:
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:5000
-   - API Documentation: http://localhost:5000/docs
+4. **Access the Application:**
+   - **Frontend**: http://localhost:3000
+   - **Backend API**: http://localhost:5000
+   - **API Documentation**: http://localhost:5000/docs
 
 ## 📚 API Documentation
 
 ### Aircraft Data Endpoints
+
 - `GET /api/aircraft` - Retrieve current aircraft data
 - `GET /api/aircraft/{icao24}` - Get specific aircraft information
 - `GET /api/threats` - Get detected security threats
 - `GET /api/aircraft/search?query={query}` - Search aircraft by criteria
 
 ### System Endpoints
+
 - `GET /api/health` - System health check
 - `GET /api/stats` - System statistics and metrics
 - `GET /api/alerts` - Get system alerts
 - `POST /api/alerts/configure` - Configure alert settings
 
 ### Authentication Endpoints
+
 - `POST /api/auth/login` - User authentication
 - `POST /api/auth/refresh` - Token refresh
 - `GET /api/auth/profile` - User profile information
@@ -158,6 +163,7 @@ REACT_APP_MAX_AIRCRAFT_DISPLAY=1000
 ## 🔒 Security Features
 
 ### Threat Detection Algorithms
+
 - **Flight Pattern Analysis**: Detect unusual or suspicious flight patterns
 - **Airspace Violation Detection**: Monitor restricted airspace violations
 - **Speed & Altitude Anomalies**: Identify aircraft operating outside normal parameters
@@ -165,6 +171,7 @@ REACT_APP_MAX_AIRCRAFT_DISPLAY=1000
 - **Route Deviation Analysis**: Monitor significant route deviations
 
 ### Alert System
+
 - **Severity Levels**: Low, Medium, High, Critical threat classifications
 - **Real-time Notifications**: Instant alerts for security threats
 - **Configurable Thresholds**: Customizable detection sensitivity
@@ -173,6 +180,7 @@ REACT_APP_MAX_AIRCRAFT_DISPLAY=1000
 ## 🧪 Testing
 
 ### Backend Tests
+
 ```bash
 cd backend
 
@@ -187,6 +195,7 @@ pytest tests/test_aircraft.py
 ```
 
 ### Frontend Tests
+
 ```bash
 cd frontend
 
@@ -204,26 +213,26 @@ npm test -- --watch
 
 ### Docker Deployment
 
-1. **Build and run with Docker Compose**:
+1. **Build and run with Docker Compose:**
    ```bash
    docker-compose up --build
    ```
 
-2. **Production deployment**:
+2. **Production deployment:**
    ```bash
    docker-compose -f docker-compose.prod.yml up -d
    ```
 
 ### Manual Deployment
 
-1. **Backend Production Setup**:
+1. **Backend Production Setup:**
    ```bash
    cd backend
    pip install -r requirements.txt
    gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:5000
    ```
 
-2. **Frontend Production Build**:
+2. **Frontend Production Build:**
    ```bash
    cd frontend
    npm run build
@@ -236,13 +245,13 @@ We welcome contributions to the OpenSky AI Cybersecurity project!
 
 ### Development Workflow
 
-1. **Fork the repository**
-2. **Create a feature branch**:
+1. Fork the repository
+2. **Create a feature branch:**
    ```bash
    git checkout -b feature/your-feature-name
    ```
-3. **Make your changes and add tests**
-4. **Run the test suite**:
+3. Make your changes and add tests
+4. **Run the test suite:**
    ```bash
    # Backend tests
    cd backend && pytest
@@ -250,15 +259,15 @@ We welcome contributions to the OpenSky AI Cybersecurity project!
    # Frontend tests
    cd frontend && npm test
    ```
-5. **Commit your changes**:
+5. **Commit your changes:**
    ```bash
    git commit -m "Add your descriptive commit message"
    ```
-6. **Push to your fork**:
+6. **Push to your fork:**
    ```bash
    git push origin feature/your-feature-name
    ```
-7. **Create a Pull Request**
+7. Create a Pull Request
 
 ### Code Style Guidelines
 
@@ -271,12 +280,12 @@ We welcome contributions to the OpenSky AI Cybersecurity project!
 
 Detailed documentation is available in the `/docs` directory:
 
-- [API Documentation](./docs/api.md)
-- [Deployment Guide](./docs/deployment.md)
-- [Security Features](./docs/security.md)
-- [Development Setup](./docs/development.md)
+- [API Documentation](docs/api.md)
+- [Deployment Guide](docs/deployment.md)
+- [Security Features](docs/security.md)
+- [Development Setup](docs/development.md)
 
-For comprehensive documentation, visit: [Documentation](./docs/index.md)
+For comprehensive documentation, visit: [Documentation](docs/index.md)
 
 ## 🗺️ Roadmap
 
@@ -316,4 +325,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 **Note**: This project is for educational and research purposes. Ensure compliance with local aviation regulations and data privacy laws when deploying in production environments.
 
-Made with ❤️ by [Shahinur Rahman](https://github.com/shahinur801)
+Made by Shahinur Islam.
